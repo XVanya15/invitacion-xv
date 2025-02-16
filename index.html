@@ -17,14 +17,21 @@
 
     /* Estilo para el header */
     header {
-      position: absolute; /* Se posiciona de manera absoluta para que no cubra el contenido */
-      top: 0;
+      position: fixed; /* Se posiciona de manera fija */
+      top: -100px; /* Inicialmente está fuera de la pantalla */
       left: 0;
       width: 100%;
       padding: 20px 0;
       background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
       text-align: center;
       z-index: 10; /* Asegura que el header quede sobre el contenido */
+      transform: translateY(-100px);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    header.visible {
+      transform: translateY(0); /* Aparece deslizándose */
+      opacity: 1; /* Totalmente visible */
     }
 
     header nav a {
@@ -114,7 +121,7 @@
 <body>
 
   <!-- Header con enlaces -->
-  <header>
+  <header id="header">
     <nav>
       <a href="#invitacion">Invitación</a>
       <a href="#fotos">Fotos</a>
@@ -176,6 +183,24 @@
         document.getElementById("timer").innerHTML = "¡La fecha ha llegado!";
       }
     }, 1000);
+
+    // Detecta el desplazamiento para hacer desaparecer el header
+    window.onscroll = function() {
+      const header = document.getElementById("header");
+      if (window.scrollY > 50) {
+        header.style.opacity = "0"; // Desvanece el header cuando se hace scroll
+      } else {
+        header.style.opacity = "1"; // Vuelve a ser visible cuando el scroll es pequeño
+      }
+    };
+
+    // Muestra el header con animación al cargar la página
+    window.onload = function() {
+      const header = document.getElementById("header");
+      setTimeout(function() {
+        header.classList.add("visible"); // Agrega la clase 'visible' para mostrar el header con animación
+      }, 100); // Se activa después de 100ms para permitir que cargue el contenido
+    };
   </script>
 
 </body>
