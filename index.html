@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación Exclusiva</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-            font-size: 18px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #007bff;
-            color: white;
-            font-size: 16px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página con Fondo Deslizante</title>
+  <style>
+    /* Aplica la imagen de fondo y configúralo para que ocupe toda la pantalla */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('foto1.jpg') no-repeat center center fixed; 
+      background-size: cover;
+    }
+
+    /* Contenido para mostrar en la página */
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      padding: 50px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    /* Agrega un poco de espacio para que se vea el fondo al hacer scroll */
+    section {
+      padding: 100px 0;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    }
+
+    section:nth-child(even) {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>¡Estás invitado a un evento exclusivo!</h1>
-        <p>Fecha: 20 de Marzo 2025</p>
-        <p>Hora: 6:00 PM</p>
-        <p>Dirección: Calle Ficticia 123</p>
-        <p>¡Esperamos verte!</p>
-        <a href="https://www.example.com" class="button">Confirmar asistencia</a>
-    </div>
+
+  <div class="content">
+    <h1>Bienvenido a mi página</h1>
+    <p>Esta es una página de ejemplo donde la imagen de fondo se mantiene fija mientras te deslizas hacia abajo. Puedes cambiar la imagen de fondo por cualquier otra imagen que te guste.</p>
+  </div>
+
+  <section>
+    <h2>Sección 1</h2>
+    <p>Este es un texto que aparece sobre el fondo, mientras haces scroll hacia abajo.</p>
+  </section>
+
+  <section>
+    <h2>Sección 2</h2>
+    <p>Continúa bajando para ver más contenido y disfrutar de la imagen de fondo.</p>
+  </section>
+
+  <section>
+    <h2>Sección 3</h2>
+    <p>¡Gracias por visitar mi página web!</p>
+  </section>
+
 </body>
 </html>
