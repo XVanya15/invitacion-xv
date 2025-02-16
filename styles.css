@@ -32,13 +32,14 @@ body {
 
     header nav a:hover {
       color: #FB6F92;
+      text-decoration: underline;
     }
 
     .content {
   width: fit-content; /* Ajusta el ancho al contenido */
   height: fit-content; /* Ajusta la altura al contenido */
   margin: 0 auto; /* Centra el div en la página */
-  padding: 120px; /* Espacio interno para evitar que el contenido toque el borde */
+  padding: 20px; /* Espacio interno para evitar que el contenido toque el borde */
   border: 5px solid #000; /* Borde alrededor */
   border-radius: 50%; /* Hace el borde circular */
   display: flex;
