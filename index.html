@@ -46,22 +46,27 @@
     .content {
       position: relative;
       z-index: 1;
-      padding: 20px;
+      padding-top: 120px; /* Ajustado para evitar que se encime con el header */
       text-align: center;
     }
 
-    h1 {
+    .titulo-container {
+      display: inline-block;
       text-align: center;
-      font-size: 3em;
-      margin-bottom: 20px;
+    }
+
+    h4 {
+      color: rgb(255, 63, 108);
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5em; /* Ajusta el tamaño */
+      margin: 0; /* Evita separación extra */
     }
 
     .titulo {
       font-family: 'Dancing Script', cursive;
-      font-weight: 400;
-      font-style: normal;
-      color: rgb(255, 63, 108);
       font-size: 3.5em;
+      color: rgb(255, 63, 108);
+      margin: 0; /* Evita separación extra */
     }
 
     p {
@@ -105,7 +110,6 @@
       color: #333;
     }
 
-    /* Estilo del carrusel */
     .carrusel {
       width: 100%;
       max-width: 800px;
@@ -137,12 +141,11 @@
     </nav>
   </header>
 
-  <br>
-  <br>
-  <br>
   <div class="content">
-    <h4 style="color: rgb(255, 63, 108); font-family: 'Dancing Script', cursive;">XV Años</h4>
-    <h2 class="titulo">Vanya</h2>
+    <div class="titulo-container">
+      <h4>XV Años</h4>
+      <h2 class="titulo">Vanya</h2>
+    </div>
   </div>
 
   <!-- Temporizador de cuenta regresiva -->
@@ -175,10 +178,8 @@
   </section>
 
   <script>
-    // Establece la fecha de la meta
     const countDownDate = new Date("May 3, 2025 18:00:00").getTime();
 
-    // Actualiza el temporizador cada segundo
     const x = setInterval(function() {
       const now = new Date().getTime();
       const distance = countDownDate - now;
@@ -196,12 +197,10 @@
       }
     }, 1000);
 
-    // Función para mostrar el header deslizándose hacia abajo
     window.onload = function() {
       document.getElementById("header").classList.add("visible");
     };
 
-    // Ocultar el header al hacer scroll
     window.onscroll = function() {
       let scrollPos = window.scrollY;
       let header = document.getElementById("header");
@@ -209,7 +208,6 @@
       header.style.opacity = scrollPos > 100 ? 0 : 1;
     };
 
-    // Carrusel de fotos
     let currentIndex = 0;
     const images = document.querySelector('.carrusel-images');
     const totalImages = document.querySelectorAll('.carrusel img').length;
@@ -222,3 +220,4 @@
 
 </body>
 </html>
+
