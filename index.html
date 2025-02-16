@@ -6,31 +6,29 @@
   <title>Mi Página con Temporizador</title>
   <link rel="icon" href="pastel.png" type="image/x-icon">
   <style>
-    /* Aplica la imagen de fondo y configúralo para que ocupe toda la pantalla */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('foto1.jpg') no-repeat center center fixed; /* Fondo estático */
+      background: url('foto1.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: white; /* Texto en blanco para mayor visibilidad */
+      color: white;
     }
 
-    /* Estilo para el header */
     header {
-      position: fixed; /* Fijado en la parte superior */
-      top: -100px; /* Empieza fuera de la vista */
+      position: fixed;
+      top: -100px;
       left: 0;
       width: 100%;
       padding: 20px 0;
-      background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+      background-color: rgba(0, 0, 0, 0.5);
       text-align: center;
-      z-index: 10; /* Asegura que el header quede sobre el contenido */
-      transition: top 1.17s ease, opacity 1.17s ease; /* Animación más lenta para deslizar y desvanecer */
+      z-index: 10;
+      transition: top 1.17s ease, opacity 1.17s ease;
     }
 
     header.visible {
-      top: 0; /* Cuando se vuelve visible */
-      opacity: 1; /* Totalmente visible */
+      top: 0;
+      opacity: 1;
     }
 
     header nav a {
@@ -41,7 +39,7 @@
     }
 
     header nav a:hover {
-      color: #FB6F92; /* Cambio de color al pasar el ratón */
+      color: #FB6F92;
     }
 
     .content {
@@ -63,7 +61,6 @@
       margin: 20px auto;
     }
 
-    /* Estilo del temporizador */
     #countdown {
       font-size: 2em;
       text-align: center;
@@ -74,29 +71,26 @@
       color: #fff;
     }
 
-    /* Estilo de las secciones con colores pastel */
     section {
       padding: 100px 0;
       text-align: center;
       color: #333;
-      margin: 70px 0; /* Espaciado entre secciones */
-      border-radius: 15px; /* Bordes redondeados para las secciones */
+      margin: 70px 0;
+      border-radius: 15px;
     }
 
-    /* Fondo sólido para las secciones */
     section:nth-child(odd) {
-      background-color: #FFB6C1; /* Rosa pastel sólido */
+      background-color: #FFB6C1;
     }
 
     section:nth-child(even) {
-      background-color: #ADD8E6; /* Azul pastel sólido */
+      background-color: #ADD8E6;
     }
 
     h2 {
-      color: #333; /* Títulos con color oscuro */
+      color: #333;
     }
 
-    /* Recuadros de texto con fondo blanco */
     p {
       font-size: 1.2em;
       line-height: 1.6;
@@ -104,47 +98,52 @@
       margin: 20px auto;
       padding: 15px;
       border-radius: 10px;
-      background-color: #ffffff; /* Fondo blanco sólido */
+      background-color: #ffffff;
     }
 
-    /* Estilo para el carrusel */
+    /* Carrusel */
     .carousel-container {
       width: 80%;
       margin: 0 auto;
       position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     .carousel {
       display: flex;
-      overflow: hidden;
-      border-radius: 10px;
+      transition: transform 1s ease;
     }
 
     .carousel img {
       width: 100%;
       height: auto;
-      transition: transform 1s ease;
+      border-radius: 15px;
     }
 
-    .carousel-control-left, .carousel-control-right {
+    .carousel-nav {
       position: absolute;
       top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
       transform: translateY(-50%);
+      z-index: 10;
+    }
+
+    .carousel-nav button {
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
-      padding: 10px;
-      font-size: 24px;
+      font-size: 2em;
       border: none;
+      padding: 10px;
       cursor: pointer;
-      z-index: 100;
+      border-radius: 50%;
     }
 
-    .carousel-control-left {
-      left: 10px;
-    }
-
-    .carousel-control-right {
-      right: 10px;
+    .carousel-nav button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
     }
 
   </style>
@@ -190,8 +189,10 @@
       </div>
 
       <!-- Controles para el carrusel -->
-      <button class="carousel-control-left" id="prev">&#10094;</button>
-      <button class="carousel-control-right" id="next">&#10095;</button>
+      <div class="carousel-nav">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
     </div>
   </section>
 
@@ -240,25 +241,24 @@
       var header = document.getElementById("header");
 
       if (scrollPos > 100) {
-        header.style.opacity = 0; // Desvanece el header al hacer scroll
+        header.style.opacity = 0;
       } else {
-        header.style.opacity = 1; // Vuelve a ser opaco cuando se vuelve hacia arriba
+        header.style.opacity = 1;
       }
     };
 
-    // Función para controlar el carrusel
+    // Carrusel de imágenes con desplazamiento automático cada 10 segundos
     let currentIndex = 0;
     const images = document.querySelectorAll(".carousel img");
     const totalImages = images.length;
 
-    // Función para mover el carrusel
     function moveCarousel(index) {
       const carousel = document.getElementById("carousel");
       const offset = -index * 100;
       carousel.style.transform = `translateX(${offset}%)`;
     }
 
-    // Controlar el movimiento del carrusel
+    // Botones de control manual
     document.getElementById("next").addEventListener("click", function() {
       currentIndex = (currentIndex + 1) % totalImages;
       moveCarousel(currentIndex);
@@ -268,6 +268,12 @@
       currentIndex = (currentIndex - 1 + totalImages) % totalImages;
       moveCarousel(currentIndex);
     });
+
+    // Función para cambiar automáticamente cada 10 segundos
+    setInterval(function() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      moveCarousel(currentIndex);
+    }, 10000); // 10000 ms = 10 segundos
   </script>
 
 </body>
