@@ -100,6 +100,25 @@
       border-radius: 10px;
       background-color: #ffffff;
     }
+
+    /* Estilo del carrusel */
+    .carrusel {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .carrusel-images {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+
+    .carrusel img {
+      width: 100%;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
@@ -131,8 +150,16 @@
 
   <section id="fotos">
     <h2>Sección 2: Fotos</h2>
-    <!-- Imagen única -->
-    <img src="foto1.jpg" alt="Foto 1" style="width: 100%; max-width: 800px; border-radius: 10px;">
+    <!-- Carrusel -->
+    <div class="carrusel">
+      <div class="carrusel-images">
+        <img src="foto1.jpg" alt="Foto 1">
+        <img src="foto1.jpg" alt="Foto 2">
+        <img src="foto1.jpg" alt="Foto 3">
+        <img src="foto1.jpg" alt="Foto 4">
+        <img src="foto1.jpg" alt="Foto 5">
+      </div>
+    </div>
   </section>
 
   <section id="mesa-de-regalos">
@@ -185,12 +212,18 @@
         header.style.opacity = 1;
       }
     };
+
+    // Carrusel de fotos
+    let currentIndex = 0;
+    const images = document.querySelector('.carrusel-images');
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % 5; // Se repite 5 veces
+      images.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, 3000); // Cambia cada 3 segundos
   </script>
 
 </body>
 </html>
-
-
 
 
 
