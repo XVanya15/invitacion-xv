@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('foto1.jpg') no-repeat center center fixed; 
+      background: url('foto1.jpg') no-repeat center center fixed; /* Fondo estático */
       background-size: cover;
       color: white; /* Texto en blanco para mayor visibilidad */
     }
@@ -34,30 +34,29 @@
       margin: 20px auto;
     }
 
-    /* Estilo de las secciones con colores pastel */
+    /* Estilo de las secciones con colores pastel, ahora con fondo sólido */
     section {
       padding: 100px 0;
       text-align: center;
       color: #333;
-      background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
       margin: 20px 0; /* Espaciado entre secciones */
       border-radius: 15px; /* Bordes redondeados para las secciones */
     }
 
-    /* Sección con fondo pastel */
+    /* Fondo sólido para las secciones */
     section:nth-child(odd) {
-      background-color: rgba(255, 182, 193, 0.7); /* Rosa pastel */
+      background-color: #FFB6C1; /* Rosa pastel sólido */
     }
 
     section:nth-child(even) {
-      background-color: rgba(173, 216, 230, 0.7); /* Azul pastel */
+      background-color: #ADD8E6; /* Azul pastel sólido */
     }
 
     h2 {
       color: #333; /* Títulos con color oscuro */
     }
 
-    /* Recuadros de texto con fondo translúcido */
+    /* Recuadros de texto con fondo blanco */
     p {
       font-size: 1.2em;
       line-height: 1.6;
@@ -65,7 +64,7 @@
       margin: 20px auto;
       padding: 15px;
       border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+      background-color: #ffffff; /* Fondo blanco sólido */
     }
   </style>
 </head>
@@ -78,7 +77,7 @@
 
   <section>
     <h2>Sección 1</h2>
-    <p>Este es un texto que aparece sobre el fondo pastel, mientras haces scroll hacia abajo.</p>
+    <p>Este es un texto que aparece sobre el fondo sólido mientras haces scroll hacia abajo.</p>
   </section>
 
   <section>
