@@ -74,7 +74,7 @@
       color: #fff;
     }
 
-    /* Estilo de las secciones con colores pastel, ahora con fondo sólido */
+    /* Estilo de las secciones con colores pastel */
     section {
       padding: 100px 0;
       text-align: center;
@@ -107,15 +107,46 @@
       background-color: #ffffff; /* Fondo blanco sólido */
     }
 
-     p1 {
-      font-size: 1.2em;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 15px;
-      border-radius: 10px;
-      background-color: black;
+    /* Estilo para el carrusel */
+    .carousel-container {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
     }
+
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      transition: transform 1s ease;
+    }
+
+    .carousel-control-left, .carousel-control-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .carousel-control-left {
+      left: 10px;
+    }
+
+    .carousel-control-right {
+      right: 10px;
+    }
+
   </style>
 </head>
 <body>
@@ -144,10 +175,36 @@
     <h2>Sección 1: Invitación</h2>
     <p>Este es un texto que aparece sobre el fondo sólido mientras haces scroll hacia abajo.</p>
   </section>
+
   <section id="fotos">
     <h2>Sección 2: Fotos</h2>
-    <p>Continúa bajando para ver más contenido y disfrutar de la imagen de fondo junto con los recuadros de texto en colores suaves.</p>
+
+    <!-- Carrusel de fotos -->
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <img src="foto1.jpg" alt="Foto 1">
+        <img src="foto2.jpg" alt="Foto 2">
+        <img src="foto3.jpg" alt="Foto 3">
+        <img src="foto4.jpg" alt="Foto 4">
+        <img src="foto5.jpg" alt="Foto 5">
+        <img src="foto6.jpg" alt="Foto 6">
+        <img src="foto7.jpg" alt="Foto 7">
+        <img src="foto8.jpg" alt="Foto 8">
+        <img src="foto9.jpg" alt="Foto 9">
+        <img src="foto10.jpg" alt="Foto 10">
+        <img src="foto11.jpg" alt="Foto 11">
+        <img src="foto12.jpg" alt="Foto 12">
+        <img src="foto13.jpg" alt="Foto 13">
+        <img src="foto14.jpg" alt="Foto 14">
+        <img src="foto15.jpg" alt="Foto 15">
+      </div>
+
+      <!-- Controles para el carrusel -->
+      <button class="carousel-control-left" id="prev">&#10094;</button>
+      <button class="carousel-control-right" id="next">&#10095;</button>
+    </div>
   </section>
+
   <section id="mesa-de-regalos">
     <h2>Sección 3: Mesa de Regalos</h2>
     <p>¡Gracias por visitar mi página web! Espero que te guste el diseño con colores pastel.</p>
@@ -198,10 +255,34 @@
         header.style.opacity = 1; // Vuelve a ser opaco cuando se vuelve hacia arriba
       }
     };
+
+    // Función para controlar el carrusel
+    let currentIndex = 0;
+    const images = document.querySelectorAll(".carousel img");
+    const totalImages = images.length;
+
+    // Función para mover el carrusel
+    function moveCarousel(index) {
+      const carousel = document.getElementById("carousel");
+      const offset = -index * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Controlar el movimiento del carrusel
+    document.getElementById("next").addEventListener("click", function() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      moveCarousel(currentIndex);
+    });
+
+    document.getElementById("prev").addEventListener("click", function() {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      moveCarousel(currentIndex);
+    });
   </script>
 
 </body>
 </html>
+
 
 
 
