@@ -100,91 +100,6 @@
       border-radius: 10px;
       background-color: #ffffff;
     }
-
-    /* Carrusel */
-.carrusel {
-  posición: absoluta;
-  arriba: 50%;
-  izquierda: 50%;
-  ancho: 190px;
-  altura: 210px;
-  margen: 0;
-  -webkit-perspectiva: 800px;
-  perspectiva: 800px;
-  -webkit-transform: traducir(-50%, -50%);
-  -ms-transform: traducir(-50%, -50%);
-  transformar: traducir(-50%, -50%);
-}
-.contenido del carrusel {
-  posición: absoluta;
-  ancho: 100%;
-  altura: 100%;
-  -webkit-transform-style: preservar-3d;
-  estilo de transformación: preserve-3d;
-  -webkit-transform: translateZ(-182px) rotateY(0);
-  transformar: translateZ(-182px) rotateY(0);
-  -webkit-animation: carrusel 10s infinito cubic-bezier(1, 0.015, 0.295, 1.225) hacia adelante;
-  animación: carrusel 10s infinito cubic-bezier(1, 0.015, 0.295, 1.225) hacia adelante;
-}
-.elemento del carrusel {
-  posición: absoluta;
-  arriba: 0;
-  izquierda: 0;
-  ancho: 190px;
-  altura: 210px;
-  radio del borde: 6px;
-}
-.elemento-carrusel:nth-child(1) {
-  fondo: rgba(252, 192, 77, 0.9);
-  -webkit-transform: rotateY(0) translateZ(182px);
-  transformar: rotateY(0) translateZ(182px);
-}
-.elemento-carrusel:nth-child(2) {
-  fondo: rgba(49, 192, 204, 0.9);
-  -webkit-transform: rotateY(120deg) translateZ(182px);
-  transformar: rotateY(120deg) translateZ(182px);
-}
-.elemento-carrusel:nth-child(3) {
-  fondo: rgba(236, 233, 242, 0.9);
-  -webkit-transform: rotateY(240deg) translateZ(182px);
-  transformar: rotateY(240deg) translateZ(182px);
-}
-    Fotogramas clave de @-webkit
-carrusel { 0%, 17,5% {
- -webkit-transform: translateZ(-182px) rotateY(0);
- transformar: translateZ(-182px) rotateY(0);
-}
- 27,5%, 45% {
- -webkit-transform: translateZ(-182px) rotateY(-120deg);
- transformar: translateZ(-182px) rotateY(-120deg);
-}
- 55%, 72,5% {
- -webkit-transform: translateZ(-182px) rotateY(-240deg);
- transformar: translateZ(-182px) rotateY(-240deg);
-}
- 82,5%, 100% {
- -webkit-transform: translateZ(-182px) rotateY(-360deg);
- transformar: translateZ(-182px) rotateY(-360deg);
-}
-}
- @fotogramas clave
-carrusel { 0%, 17,5% {
- -webkit-transform: translateZ(-182px) rotateY(0);
- transformar: translateZ(-182px) rotateY(0);
-}
- 27,5%, 45% {
- -webkit-transform: translateZ(-182px) rotateY(-120deg);
- transformar: translateZ(-182px) rotateY(-120deg);
-}
- 55%, 72,5% {
- -webkit-transform: translateZ(-182px) rotateY(-240deg);
- transformar: translateZ(-182px) rotateY(-240deg);
-}
- 82,5%, 100% {
- -webkit-transform: translateZ(-182px) rotateY(-360deg);
- transformar: translateZ(-182px) rotateY(-360deg);
-}
-}
   </style>
 </head>
 <body>
@@ -216,28 +131,8 @@ carrusel { 0%, 17,5% {
 
   <section id="fotos">
     <h2>Sección 2: Fotos</h2>
-    <!-- Carrusel de fotos -->
-<div class="carrusel">
-  <div class="contenido-del-carrusel">
-    <div class="elemento-carrusel">
-      <img src="foto1.jpg" alt="Foto 1">
-    </div>
-    <div class="elemento-carrusel">
-      <img src="foto1.jpg" alt="Foto 2">
-    </div>
-    <div class="elemento-carrusel">
-      <img src="foto1.jpg" alt="Foto 3">
-    </div>
-    <div class="elemento-carrusel">
-      <img src="foto1.jpg" alt="Foto 4">
-    </div>
-    <div class="elemento-carrusel">
-      <img src="foto1.jpg" alt="Foto 5">
-    </div>
-  </div>
-</div>
-
-
+    <!-- Imagen única -->
+    <img src="foto1.jpg" alt="Foto 1" style="width: 100%; max-width: 800px; border-radius: 10px;">
   </section>
 
   <section id="mesa-de-regalos">
@@ -290,12 +185,11 @@ carrusel { 0%, 17,5% {
         header.style.opacity = 1;
       }
     };
-
-    
   </script>
 
 </body>
 </html>
+
 
 
 
