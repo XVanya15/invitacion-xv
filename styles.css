@@ -53,13 +53,13 @@ header nav a:hover {
 }
 
 h2 {
-  font-family: "Cormorant", Sans-serif;
-  font-size: 550px;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: none;
-  line-height: 1em;
-  color: #FFFFFF;
+    font-family: "Cormorant", Sans-serif;
+    font-size: 100px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 0em;
+    color: #FFFFFF;
 }
 
 h4 {
