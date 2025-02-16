@@ -1,121 +1,121 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: url('foto1.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('foto1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
 
-header {
-  position: fixed;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  padding: 20px 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  z-index: 10;
-  transition: top 1.17s ease, opacity 1.17s ease;
-}
+    header {
+      position: fixed;
+      top: -100px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      z-index: 10;
+      transition: top 1.17s ease, opacity 1.17s ease;
+    }
 
-header.visible {
-  top: 0;
-  opacity: 1;
-}
+    header.visible {
+      top: 0;
+      opacity: 1;
+    }
 
-header nav a {
-  margin: 0 15px;
-  color: white;
-  font-size: 1.2em;
-  text-decoration: none;
-}
+    header nav a {
+      margin: 0 15px;
+      color: white;
+      font-size: 1.2em;
+      text-decoration: none;
+    }
 
-header nav a:hover {
-  color: #FB6F92;
-}
+    header nav a:hover {
+      color: #FB6F92;
+    }
 
-.content {
-  position: relative;
-  z-index: 1;
-  padding-top: 120px; /* Evita que se encime con el header */
-  text-align: center;
-}
+    .content {
+      position: relative;
+      z-index: 1;
+      padding-top: 120px; /* Ajustado para evitar que se encime con el header */
+      text-align: center;
+    }
 
-.titulo-container {
-  display: inline-block;
-  text-align: center;
-}
+    .titulo-container {
+      display: inline-block;
+      text-align: center;
+    }
 
-h4 {
-  color: rgb(255, 63, 108);
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.5em;
-  margin: 0;
-}
+    h4 {
+      color: rgb(255, 63, 108);
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5em; /* Ajusta el tamaño */
+      margin: 0; /* Evita separación extra */
+    }
 
-.titulo {
-  font-family: 'Dancing Script', cursive;
-  font-size: 3.5em;
-  color: rgb(255, 63, 108);
-  margin: 0;
-}
+    .titulo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.5em;
+      color: rgb(255, 63, 108);
+      margin: 0; /* Evita separación extra */
+    }
 
-p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  color: black;
-}
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      color: black;
+    }
 
-#countdown {
-  font-size: 2em;
-  text-align: center;
-  margin: 30px 0;
-  padding: 20px;
-  background-color: black;
-  border-radius: 10px;
-  color: #fff;
-}
+    #countdown {
+      font-size: 2em;
+      text-align: center;
+      margin: 30px 0;
+      padding: 20px;
+      background-color: black;
+      border-radius: 10px;
+      color: #fff;
+    }
 
-section {
-  padding: 100px 0;
-  text-align: center;
-  color: #333;
-  margin: 70px 0;
-  border-radius: 15px;
-}
+    section {
+      padding: 100px 0;
+      text-align: center;
+      color: #333;
+      margin: 70px 0;
+      border-radius: 15px;
+    }
 
-section:nth-child(odd) {
-  background-color: #FFB6C1;
-}
+    section:nth-child(odd) {
+      background-color: #FFB6C1;
+    }
 
-section:nth-child(even) {
-  background-color: #ADD8E6;
-}
+    section:nth-child(even) {
+      background-color: #ADD8E6;
+    }
 
-h2 {
-  color: #333;
-}
+    h2 {
+      color: #333;
+    }
 
-.carrusel {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 10px;
-  position: relative;
-}
+    .carrusel {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+    }
 
-.carrusel-images {
-  display: flex;
-  transition: transform 1s ease-in-out;
-}
+    .carrusel-images {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
 
-.carrusel img {
-  width: 100%;
-  border-radius: 10px;
-}
+    .carrusel img {
+      width: 100%;
+      border-radius: 10px;
+    }
