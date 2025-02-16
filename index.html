@@ -182,10 +182,10 @@
     <div class="carousel-container">
       <div class="carousel" id="carousel">
         <img src="foto1.jpg" alt="Foto 1">
-        <img src="foto1.jpg" alt="Foto 2">
-        <img src="foto1.jpg" alt="Foto 3">
-        <img src="foto1.jpg" alt="Foto 4">
-        <img src="foto1.jpg" alt="Foto 5">
+        <img src="foto2.jpg" alt="Foto 2">
+        <img src="foto3.jpg" alt="Foto 3">
+        <img src="foto4.jpg" alt="Foto 4">
+        <img src="foto5.jpg" alt="Foto 5">
       </div>
 
       <!-- Controles para el carrusel -->
@@ -251,6 +251,7 @@
     let currentIndex = 0;
     const images = document.querySelectorAll(".carousel img");
     const totalImages = images.length;
+    let autoChangeInterval;
 
     function moveCarousel(index) {
       const carousel = document.getElementById("carousel");
@@ -258,26 +259,42 @@
       carousel.style.transform = `translateX(${offset}%)`;
     }
 
+    // Iniciar el cambio automático
+    function startAutoChange() {
+      autoChangeInterval = setInterval(function() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        moveCarousel(currentIndex);
+      }, 10000); // 10000 ms = 10 segundos
+    }
+
+    // Detener el cambio automático
+    function stopAutoChange() {
+      clearInterval(autoChangeInterval);
+    }
+
     // Botones de control manual
     document.getElementById("next").addEventListener("click", function() {
+      stopAutoChange(); // Detener el auto cambio
       currentIndex = (currentIndex + 1) % totalImages;
       moveCarousel(currentIndex);
+      startAutoChange(); // Reiniciar el auto cambio
     });
 
     document.getElementById("prev").addEventListener("click", function() {
+      stopAutoChange(); // Detener el auto cambio
       currentIndex = (currentIndex - 1 + totalImages) % totalImages;
       moveCarousel(currentIndex);
+      startAutoChange(); // Reiniciar el auto cambio
     });
 
-    // Función para cambiar automáticamente cada 10 segundos
-    setInterval(function() {
-      currentIndex = (currentIndex + 1) % totalImages;
-      moveCarousel(currentIndex);
-    }, 10000); // 10000 ms = 10 segundos
+    // Iniciar el carrusel cuando la página se carga
+    startAutoChange();
+
   </script>
 
 </body>
 </html>
+
 
 
 
