@@ -71,11 +71,13 @@ margin: 0;
     color: #FFFFFF;
 } 
 
-    .titulo {
-      font-family: 'Dancing Script', cursive;
-      font-size: 3.5em;
-      color: rgb(255, 63, 108);
-      margin: 0; /* Evita separación extra */
+    h2 {
+      font-family: "Cormorant", Sans-serif;
+      font-size: 55px;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 1em;
+    color: #FFFFFF;
     }
 
     p {
@@ -113,10 +115,6 @@ margin: 0;
 
     section:nth-child(even) {
       background-color: #ADD8E6;
-    }
-
-    h2 {
-      color: #333;
     }
 
     .carrusel {
