@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Página con Temporizador</title>
   <link rel="icon" href="pastel.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -46,6 +47,7 @@
       position: relative;
       z-index: 1;
       padding: 50px;
+      text-align: center;
     }
 
     h1 {
@@ -54,11 +56,23 @@
       margin-bottom: 20px;
     }
 
+    .titulo {
+      font-family: 'Dancing Script', cursive;
+      font-weight: 400;
+      font-style: normal;
+      color: rgb(250, 208, 195);
+      font-size: 3.5em;
+    }
+
     p {
       font-size: 1.2em;
       line-height: 1.6;
       max-width: 800px;
       margin: 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      color: black;
     }
 
     #countdown {
@@ -91,16 +105,6 @@
       color: #333;
     }
 
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 15px;
-      border-radius: 10px;
-      background-color: #ffffff;
-    }
-
     /* Estilo del carrusel */
     .carrusel {
       width: 100%;
@@ -108,6 +112,7 @@
       margin: 0 auto;
       overflow: hidden;
       border-radius: 10px;
+      position: relative;
     }
 
     .carrusel-images {
@@ -133,14 +138,14 @@
   </header>
 
   <div class="content">
-    <h1>Bienvenido a mi página</h1>
+    <h4 style="color: rgb(250, 208, 195); font-family: 'Dancing Script', cursive;">XV Años</h4>
     <p>Esta es una página de ejemplo donde la imagen de fondo se mantiene fija mientras te deslizas hacia abajo. Puedes cambiar la imagen de fondo por cualquier otra imagen que te guste.</p>
+    <h2 class="titulo">Vanya</h2>
   </div>
 
   <!-- Temporizador de cuenta regresiva -->
   <div id="countdown">
-    <p1>Faltan:</p1>
-    <p1 id="timer"></p1>
+    <p>Faltan: <span id="timer"></span></p>
   </div>
 
   <section id="invitacion">
@@ -173,23 +178,16 @@
 
     // Actualiza el temporizador cada segundo
     const x = setInterval(function() {
-
-      // Obtén la fecha y hora actual
       const now = new Date().getTime();
-
-      // Calcula la distancia entre la fecha actual y la fecha objetivo
       const distance = countDownDate - now;
 
-      // Calcula los días, horas, minutos y segundos
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Muestra el temporizador en el elemento con id="timer"
       document.getElementById("timer").innerHTML = days + " días " + hours + " horas " + minutes + " minutos " + seconds + " segundos ";
 
-      // Si la cuenta regresiva ha terminado, muestra un mensaje
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "¡La fecha ha llegado!";
@@ -201,30 +199,24 @@
       document.getElementById("header").classList.add("visible");
     };
 
-    // Función para ocultar el header al hacer scroll
+    // Ocultar el header al hacer scroll
     window.onscroll = function() {
-      var scrollPos = window.scrollY;
-      var header = document.getElementById("header");
+      let scrollPos = window.scrollY;
+      let header = document.getElementById("header");
 
-      if (scrollPos > 100) {
-        header.style.opacity = 0;
-      } else {
-        header.style.opacity = 1;
-      }
+      header.style.opacity = scrollPos > 100 ? 0 : 1;
     };
 
     // Carrusel de fotos
     let currentIndex = 0;
     const images = document.querySelector('.carrusel-images');
+    const totalImages = document.querySelectorAll('.carrusel img').length;
+
     setInterval(() => {
-      currentIndex = (currentIndex + 1) % 5; // Se repite 5 veces
+      currentIndex = (currentIndex + 1) % totalImages;
       images.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }, 3000); // Cambia cada 3 segundos
+    }, 3000);
   </script>
 
 </body>
 </html>
-
-
-
-
