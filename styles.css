@@ -42,7 +42,7 @@ header nav a:hover {
   margin-top: 100px;
   padding: 20px; /* Espacio interno para evitar que el contenido toque el borde */
   border: 5px solid #000; /* Borde alrededor */
-  border-radius: 50%; /* Hace el borde circular */
+  /* border-radius: 50%; */ /* Elimina esta línea para quitar el borde circular */
   display: flex;
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center; /* Centra el contenido verticalmente */
