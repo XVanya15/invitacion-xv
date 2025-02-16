@@ -60,6 +60,17 @@ body {
       margin: 0; /* Evita separación extra */
     }
 
+h5{
+    font-family: "Lora", Sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+margin: 0;
+    text-transform: uppercase;
+    font-style:  2.5em;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+} 
+
     .titulo {
       font-family: 'Dancing Script', cursive;
       font-size: 3.5em;
