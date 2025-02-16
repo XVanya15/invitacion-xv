@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('foto1.jpg') no-repeat center center fixed; 
+      background: url('tu-imagen.jpg') no-repeat center center fixed; 
       background-size: cover;
     }
 
@@ -34,15 +34,34 @@
       margin: 20px auto;
     }
 
-    /* Agrega un poco de espacio para que se vea el fondo al hacer scroll */
+    /* Estilo de las secciones con colores pastel */
     section {
       padding: 100px 0;
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+      color: #333;
+    }
+
+    /* Sección con fondo pastel */
+    section:nth-child(odd) {
+      background-color: rgba(255, 182, 193, 0.7); /* Rosa pastel */
     }
 
     section:nth-child(even) {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(173, 216, 230, 0.7); /* Azul pastel */
+    }
+
+    h2 {
+      color: #fff; /* Hacer el texto de los títulos blanco */
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco translúcido */
     }
   </style>
 </head>
@@ -55,17 +74,17 @@
 
   <section>
     <h2>Sección 1</h2>
-    <p>Este es un texto que aparece sobre el fondo, mientras haces scroll hacia abajo.</p>
+    <p>Este es un texto que aparece sobre el fondo pastel, mientras haces scroll hacia abajo.</p>
   </section>
 
   <section>
     <h2>Sección 2</h2>
-    <p>Continúa bajando para ver más contenido y disfrutar de la imagen de fondo.</p>
+    <p>Continúa bajando para ver más contenido y disfrutar de la imagen de fondo junto con los recuadros de texto en colores suaves.</p>
   </section>
 
   <section>
     <h2>Sección 3</h2>
-    <p>¡Gracias por visitar mi página web!</p>
+    <p>¡Gracias por visitar mi página web! Espero que te guste el diseño con colores pastel.</p>
   </section>
 
 </body>
