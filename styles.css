@@ -16,7 +16,9 @@ header {
   text-align: center;
   z-index: 10;
   transition: top 1.17s ease, opacity 1.17s ease;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px; /* Curva en la esquina inferior izquierda */
+  border-bottom-right-radius: 20px; /* Curva en la esquina inferior derecha */
+
 }
 
 header.visible {
