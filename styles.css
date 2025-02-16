@@ -1,45 +1,45 @@
 body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('foto1.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('foto1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
 
-    header {
-      position: fixed;
-      top: -100px;
-      left: 0;
-      width: 100%;
-      padding: 20px 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      text-align: center;
-      z-index: 10;
-      transition: top 1.17s ease, opacity 1.17s ease;
-    }
+header {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  z-index: 10;
+  transition: top 1.17s ease, opacity 1.17s ease;
+}
 
-    header.visible {
-      top: 0;
-      opacity: 1;
-    }
+header.visible {
+  top: 0;
+  opacity: 1;
+}
 
-    header nav a {
-      margin: 0 15px;
-      color: white;
-      font-size: 1.2em;
-      text-decoration: none;
-    }
+header nav a {
+  margin: 0 15px;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+}
 
-    header nav a:hover {
-      color: #FB6F92;
-      text-decoration: underline;
-    }
+header nav a:hover {
+  color: #FB6F92;
+  text-decoration: underline;
+}
 
-    .content {
+.content {
   width: fit-content; /* Ajusta el ancho al contenido */
   height: fit-content; /* Ajusta la altura al contenido */
   margin: 0 auto; /* Centra el div en la página */
-  margin-top: 100px; 
+  margin-top: 100px;
   padding: 20px; /* Espacio interno para evitar que el contenido toque el borde */
   border: 5px solid #000; /* Borde alrededor */
   border-radius: 50%; /* Hace el borde circular */
@@ -52,86 +52,86 @@ body {
   text-align: center; /* Centra el texto dentro del container */
 }
 
+h2 {
+  font-family: "Cormorant", Sans-serif;
+  font-size: 550px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1em;
+  color: #FFFFFF;
+}
 
-    h4 {
-      color: rgb(255, 63, 108);
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.5em; /* Ajusta el tamaño */
-      margin: 0; /* Evita separación extra */
-    }
+h4 {
+  color: rgb(255, 63, 108);
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5em; /* Ajusta el tamaño */
+  margin: 0; /* Evita separación extra */
+}
 
-h5{
-    font-family: "Lora", Sans-serif;
-    font-size: 21px;
-    font-weight: 500;
-margin: 0;
-    text-transform: uppercase;
-    font-style:  2.5em;
-    letter-spacing: 3px;
-    color: #FFFFFF;
-} 
+h5 {
+  font-family: "Lora", Sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0;
+  text-transform: uppercase;
+  font-style: 2.5em;
+  letter-spacing: 3px;
+  color: #FFFFFF;
+}
 
-    h2 {
-font-family: "Cormorant", Sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-    line-height: 1em;
-    color: #FFFFFF;
-    }
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: black;
+}
 
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 15px;
-      border-radius: 10px;
-      background-color: #ffffff;
-      color: black;
-    }
+#countdown {
+  font-size: 2em;
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px;
+  background-color: black;
+  border-radius: 10px;
+  color: #fff;
+}
 
-    #countdown {
-      font-size: 2em;
-      text-align: center;
-      margin: 30px 0;
-      padding: 20px;
-      background-color: black;
-      border-radius: 10px;
-      color: #fff;
-    }
+section {
+  padding: 100px 0;
+  text-align: center;
+  color: #333;
+  margin: 70px 0;
+  border-radius: 15px;
+}
 
-    section {
-      padding: 100px 0;
-      text-align: center;
-      color: #333;
-      margin: 70px 0;
-      border-radius: 15px;
-    }
+section:nth-child(odd) {
+  background-color: #FFB6C1;
+}
 
-    section:nth-child(odd) {
-      background-color: #FFB6C1;
-    }
+section:nth-child(even) {
+  background-color: #ADD8E6;
+}
 
-    section:nth-child(even) {
-      background-color: #ADD8E6;
-    }
+.carrusel {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
 
-    .carrusel {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      overflow: hidden;
-      border-radius: 10px;
-      position: relative;
-    }
+.carrusel-images {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
 
-    .carrusel-images {
-      display: flex;
-      transition: transform 1s ease-in-out;
-    }
-
-    .carrusel img {
-      width: 100%;
-      border-radius: 10px;
-    }
+.carrusel img {
+  width: 100%;
+  border-radius: 10px;
+}
