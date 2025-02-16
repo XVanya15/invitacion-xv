@@ -35,16 +35,21 @@
     }
 
     .content {
-      position: relative;
-      z-index: 1;
-      padding-top: 120px; /* Ajustado para evitar que se encime con el header */
-      text-align: center;
-    }
+  width: fit-content; /* Ajusta el ancho al contenido */
+  height: fit-content; /* Ajusta la altura al contenido */
+  margin: 0 auto; /* Centra el div en la página */
+  padding: 20px; /* Espacio interno para evitar que el contenido toque el borde */
+  border: 5px solid #000; /* Borde alrededor */
+  border-radius: 50%; /* Hace el borde circular */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}
 
-    .titulo-container {
-      display: inline-block;
-      text-align: center;
-    }
+.titulo-container {
+  text-align: center; /* Centra el texto dentro del container */
+}
+
 
     h4 {
       color: rgb(255, 63, 108);
