@@ -15,6 +15,29 @@
       color: white; /* Texto en blanco para mayor visibilidad */
     }
 
+    /* Estilo para el header */
+    header {
+      position: absolute; /* Se posiciona de manera absoluta para que no cubra el contenido */
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+      text-align: center;
+      z-index: 10; /* Asegura que el header quede sobre el contenido */
+    }
+
+    header nav a {
+      margin: 0 15px;
+      color: white;
+      font-size: 1.2em;
+      text-decoration: none;
+    }
+
+    header nav a:hover {
+      color: #FFB6C1; /* Cambio de color al pasar el ratón */
+    }
+
     .content {
       position: relative;
       z-index: 1;
@@ -90,6 +113,15 @@
 </head>
 <body>
 
+  <!-- Header con enlaces -->
+  <header>
+    <nav>
+      <a href="#invitacion">Invitación</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#mesa-de-regalos">Mesa de Regalos</a>
+    </nav>
+  </header>
+
   <div class="content">
     <h1>Bienvenido a mi página</h1>
     <p>Esta es una página de ejemplo donde la imagen de fondo se mantiene fija mientras te deslizas hacia abajo. Puedes cambiar la imagen de fondo por cualquier otra imagen que te guste.</p>
@@ -101,18 +133,18 @@
     <p1 id="timer"></p1>
   </div>
 
-  <section>
-    <h2>Sección 1</h2>
+  <section id="invitacion">
+    <h2>Sección 1: Invitación</h2>
     <p>Este es un texto que aparece sobre el fondo sólido mientras haces scroll hacia abajo.</p>
   </section>
 
-  <section>
-    <h2>Sección 2</h2>
+  <section id="fotos">
+    <h2>Sección 2: Fotos</h2>
     <p>Continúa bajando para ver más contenido y disfrutar de la imagen de fondo junto con los recuadros de texto en colores suaves.</p>
   </section>
 
-  <section>
-    <h2>Sección 3</h2>
+  <section id="mesa-de-regalos">
+    <h2>Sección 3: Mesa de Regalos</h2>
     <p>¡Gracias por visitar mi página web! Espero que te guste el diseño con colores pastel.</p>
   </section>
 
@@ -148,3 +180,4 @@
 
 </body>
 </html>
+
