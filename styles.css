@@ -41,12 +41,12 @@ header nav a:hover {
   margin: 0 auto; /* Centra el div en la página */
   margin-top: 100px;
   padding: 20px; /* Espacio interno para evitar que el contenido toque el borde */
-  border: 5px solid #000; /* Borde alrededor */
-  /* border-radius: 50%; */ /* Elimina esta línea para quitar el borde circular */
+  /* Elimina el borde y el borde circular */
   display: flex;
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center; /* Centra el contenido verticalmente */
 }
+
 
 .titulo-container {
   text-align: center; /* Centra el texto dentro del container */
