@@ -143,10 +143,10 @@ p {
 #countdown {
   font-size: 2em;
   text-align: center;
-  margin: 30px 0;
+  margin: -4px 0;
   padding: 20px;
   background-color: black;
-  border-radius: 10px;
+  border-radius: 0px; /* Elimina los bordes redondeados */
   color: #fff;
 }
 
