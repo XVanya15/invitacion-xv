@@ -9,8 +9,8 @@ body {
 header {
   position: fixed;
   top: -100px;
-  left: 40px;
-  width: 22%;
+  left: 38px;
+  width: 300px;
   padding: 20px 0;
   background-color: rgba(226, 190, 153, 0.5);
   text-align: center;
@@ -26,9 +26,9 @@ header.visible {
 }
 
 header nav a {
-  width: 85%;
   margin: 0 8px;
   color: white;
+  font-size: 1em;
   text-decoration: none;
 }
 
