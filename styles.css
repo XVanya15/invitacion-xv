@@ -1,12 +1,16 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: 
-    url('foto6.jpg') no-repeat center center fixed,
-    url('foto1.jpg') no-repeat center center fixed,
-    url('foto6.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
+  background-color: white; /* Fondo blanco */
+  color: black; /* Puedes cambiar el color del texto si lo necesitas */
+}
+
+
+.fondo {
+  width: 100%;
+  background-size: cover; /* Ajusta la imagen al tamaño del div */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 header {
