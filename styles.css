@@ -80,7 +80,7 @@ header nav a:hover {
 
 .titulo-container h2 {
   font-family: "Cormorant", Sans-serif;
-  font-size: clamp(3.3rem, 8vw, 8rem); /* Se adapta entre 2rem y 6rem según el ancho */
+  font-size: clamp(2.7rem, 9vw, 8rem); /* Se adapta entre 2rem y 6rem según el ancho */
   font-weight: 500;
   text-decoration: none;
   line-height: 0.9; /* Reduce el espacio entre líneas */
@@ -90,9 +90,10 @@ header nav a:hover {
 
 .titulo-container h5 {
   font-family: "Lora", Sans-serif;
-  font-size: clamp(2.4rem, 4vw, 7rem); /* Se adapta entre 1rem y 3rem */
+  font-size: clamp(1.2rem, 4vw, 6rem); /* Se adapta entre 1rem y 3rem */
   font-weight: 500;
-  margin: 17px 0; /* Reduce el margen superior e inferior */
+  margin-top: 17px;
+  margin-bottom: 0px;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #D5BA98;
