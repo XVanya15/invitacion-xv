@@ -66,16 +66,17 @@ header nav a:hover {
 
 .titulo-container {
   position: absolute;
-  top: 50%;
+  bottom: 0; /* Coloca el contenedor en la parte inferior de la imagen */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%); /* Centra el contenedor horizontalmente */
   text-align: center;
   color: white; /* Color blanco para el texto */
   z-index: 10; /* Asegura que el texto esté por encima de la imagen */
   background-color: rgba(0, 0, 0, 0); /* Fondo semitransparente para mejorar la visibilidad */
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0; /* Curvatura solo en las esquinas superiores */
 }
+
 
 h2 {
     font-family: "Cormorant", Sans-serif;
