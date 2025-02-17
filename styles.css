@@ -2,9 +2,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: 
-    url('foto1.jpg') no-repeat center center / cover,
-    url('foto2.jpg') no-repeat center center / cover,
-    url('foto3.jpg') no-repeat center center / cover;
+    url('foto6.jpg') no-repeat center center / cover,
+    url('foto6.jpg') no-repeat center center / cover,
+    url('foto6.jpg') no-repeat center center / cover;
   background-attachment: fixed;
   color: white;
 }
