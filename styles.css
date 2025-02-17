@@ -65,7 +65,16 @@ header nav a:hover {
 
 
 .titulo-container {
-  text-align: center; /* Centra el texto dentro del container */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Color blanco para el texto */
+  z-index: 10; /* Asegura que el texto esté por encima de la imagen */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la visibilidad */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 h2 {
