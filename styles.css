@@ -83,16 +83,16 @@ header nav a:hover {
   font-size: clamp(2rem, 8vw, 6rem); /* Se adapta entre 2rem y 6rem según el ancho */
   font-weight: 500;
   text-decoration: none;
-  line-height: 0.9; /* Reduce el espacio entre líneas */
+  line-height: 1; /* Reduce el espacio entre líneas */
   color: #D5BA98;
-  margin: 5px 0; /* Reduce el margen para que no haya separación extra */
+  margin: 15px 0; /* Reduce el margen para que no haya separación extra */
 }
 
 .titulo-container h5 {
   font-family: "Lora", Sans-serif;
   font-size: clamp(1rem, 4vw, 3rem); /* Se adapta entre 1rem y 3rem */
   font-weight: 500;
-  margin: 2px 0; /* Reduce el margen superior e inferior */
+  margin: 15px 0; /* Reduce el margen superior e inferior */
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #D5BA98;
