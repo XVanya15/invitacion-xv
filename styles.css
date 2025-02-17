@@ -101,12 +101,32 @@ header nav a:hover {
   line-height: 0.9; /* Reduce aún más la separación */
 }
 
+h2 {
+    font-family: "Cormorant", Sans-serif;
+    font-size: 100px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 0em;
+    color: #FFFFFF;
+}
 
 h4 {
   color: rgb(255, 63, 108);
   font-family: 'Dancing Script', cursive;
   font-size: 2.5em; /* Ajusta el tamaño */
   margin: 0; /* Evita separación extra */
+}
+
+h5 {
+  font-family: "Lora", Sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0;
+  text-transform: uppercase;
+  font-style: 2.5em;
+  letter-spacing: 3px;
+  color: #FFFFFF;
 }
 
 p {
