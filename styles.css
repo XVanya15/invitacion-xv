@@ -1,12 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: 
-    url('foto6.jpg') no-repeat center center / cover,
-    url('foto6.jpg') no-repeat center center / cover,
-    url('foto6.jpg') no-repeat center center / cover;
-  background-attachment: fixed;
-  color: white;
+  background-color: white; /* Fondo blanco */
+  color: black; /* Puedes cambiar el color del texto si lo necesitas */
 }
 
 header {
