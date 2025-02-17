@@ -78,15 +78,23 @@ header nav a:hover {
   border-radius: 10px 10px 0 0; /* Curvatura solo en las esquinas superiores */
 }
 
+.titulo-container h2 {
+  font-family: "Cormorant", Sans-serif;
+  font-size: clamp(2rem, 8vw, 6rem); /* Se adapta entre 2rem y 6rem según el ancho */
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.1;
+  color: #D5BA98;
+}
 
-h2 {
-    font-family: "Cormorant", Sans-serif;
-    font-size: 4vh;
-    font-weight: 50;
-    font-style: normal;
-    text-decoration: none;
-    line-height: 0em;
-    color: #D5BA98;
+.titulo-container h5 {
+  font-family: "Lora", Sans-serif;
+  font-size: clamp(1rem, 4vw, 3rem); /* Se adapta entre 1rem y 3rem */
+  font-weight: 500;
+  margin: 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #D5BA98;
 }
 
 h4 {
@@ -94,17 +102,6 @@ h4 {
   font-family: 'Dancing Script', cursive;
   font-size: 2.5em; /* Ajusta el tamaño */
   margin: 0; /* Evita separación extra */
-}
-
-h5 {
-  font-family: "Lora", Sans-serif;
-   font-size: 2vh;
-  font-weight: 50;
-  margin: 0;
-  text-transform: uppercase;
-  font-style: 2.5em;
-  letter-spacing: 3px;
-  color: #D5BA98;
 }
 
 p {
